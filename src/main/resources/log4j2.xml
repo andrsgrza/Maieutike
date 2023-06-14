@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!-- Appender for Logger1 -->
+        <File name="QuizAppender" fileName="logs/QuizLogs.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+        <!-- Appender for Logger2 -->
+        <File name="MainAppender" fileName="logs/MainLogs.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Logger1 Configuration -->
+        <Logger name="com.maieutike.service.QuizPerformer" level="INFO" additivity="false">
+            <AppenderRef ref="QuizAppender"/>
+        </Logger>
+
+        <!-- Logger2 Configuration -->
+        <Logger name="com.maieutike.Maieutike" level="INFO" additivity="false">
+            <AppenderRef ref="MainAppender"/>
+        </Logger>
+
+        <!-- Root Logger Configuration -->
+        <Root level="INFO">
+            <AppenderRef ref="QuizAppender"/> <!-- Optional: Redirect root logger to Logger1 -->
+            <AppenderRef ref="MainAppender"/> <!-- Optional: Redirect root logger to Logger2 -->
+        </Root>
+    </Loggers>
+</Configuration>
