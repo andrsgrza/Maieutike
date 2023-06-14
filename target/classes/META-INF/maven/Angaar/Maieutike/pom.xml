@@ -36,6 +36,16 @@
           <release>19</release>
         </configuration>
       </plugin>
+      <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-pmd-plugin</artifactId>
+		<version>3.1</version>
+		<configuration>
+			<rulesets>
+				<ruleset>${project.basedir}/Ruleset.xml</ruleset>
+			</rulesets>
+		</configuration>
+	</plugin>
     </plugins>
   </build>
   

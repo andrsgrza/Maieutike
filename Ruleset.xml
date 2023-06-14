@@ -1,0 +1,44 @@
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd"
+         name="My Custom Ruleset">
+
+    <description>
+        PMD Ruleset for Maieutike Project
+    </description>
+
+	<!-- Unused Local Variable -->
+	<rule ref="rulesets/java/unusedcode.xml/UnusedLocalVariable"/>
+
+	<!-- Unused Private Field -->
+	<rule ref="rulesets/java/unusedcode.xml/UnusedPrivateField"/>
+
+	<!-- Unused Method Parameter -->
+	<rule ref="rulesets/java/unusedcode.xml/UnusedFormalParameter"/>
+
+	<!-- Empty Catch Block -->
+	<rule ref="rulesets/java/empty.xml/EmptyCatchBlock"/>
+
+	<!-- Unnecessary Final Modifier -->
+	<rule ref="rulesets/java/unnecessary.xml/UnnecessaryModifier"/>
+
+	<!-- Useless Parentheses -->
+	<rule ref="rulesets/java/optimizations.xml/UselessParentheses"/>
+
+	<!-- Empty Statement Block -->
+	<rule ref="rulesets/java/empty.xml/EmptyStatementBlock"/>
+
+	<!-- Avoid Duplicate Literals -->
+	<rule ref="rulesets/java/codestyle.xml/AvoidDuplicateLiterals"/>
+
+	<!-- Cyclomatic Complexity -->
+	<rule ref="rulesets/java/controversial.xml/ExcessiveMethodLength"/>
+	<rule ref="rulesets/java/controversial.xml/ExcessiveClassLength"/>
+
+	<!-- Class Naming Conventions -->
+	<rule ref="rulesets/java/codestyle.xml/ClassNamingConventions"/>
+
+	<!-- Method Naming Conventions -->
+	<rule ref="rulesets/java/codestyle.xml/MethodNamingConventions"/>
+
+</ruleset>
